@@ -1,20 +1,45 @@
+//String DataType
+
 import UIKit
 
-// Person
-var name = "Bob" // String
+var str = "Hello, playground" // Declaration : Type inference
 
-var age = 51 // Integer
-var weight = 50.3 // Double
-var isOraganDoner = false // Boolean
+var message : String = "This is a String" // Explicit type declaration
 
-print(weight)
+/* Note Types are important in swift
+ 
+ var age : String = 10 ---> Error : cannot convert value of type 'Int' to specified type 'String'
+ 
+ 
+ swift is a typed safe language 
+ */
 
-weight = 20.74 // Variables are mutuable
-print(weight)
-
-// Constant ---> unmutuable
-
-let eyeColor = "Blue"
-
+var fullName = "Jhon Smith"
+var aMessage : String = "Hey There"
 
 
+//Constant
+let firstName = "Johnna"
+let lastName = "Smith"
+
+
+// String concatenate
+print("Full name : " + firstName + " " + lastName )
+
+// String Interpolation
+var age = 20
+var newMessage : String = " Hi, my name is \(firstName) and I am \(age) year's young🤪"
+print(newMessage)
+
+/*
+ Theory : In String Interpolation we can inject variables inside any string.
+ No matter which data types the variables belong, above example show the concept of String Interpolation
+ */
+
+newMessage.append(". And I like scary clowns.")
+print(newMessage)
+
+var num1 = "2"
+var num2 = 5
+
+print(type(of: num2),type(of: num1) )
