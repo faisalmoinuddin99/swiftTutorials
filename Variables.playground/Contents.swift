@@ -43,3 +43,24 @@ var num1 = "2"
 var num2 = 5
 
 print(type(of: num2),type(of: num1) )
+
+
+let implicitInteger = 70
+let excplicitInteger : Float = 7
+
+print(type(of: excplicitInteger))
+
+
+let label = "The width is "
+let width = 94
+
+let widthLabel = label + " " + String(width)
+print(widthLabel)
+
+let apple = 8
+let quotation = """
+
+I said " I have \(apple)
+"""
+
+print(quotation)
