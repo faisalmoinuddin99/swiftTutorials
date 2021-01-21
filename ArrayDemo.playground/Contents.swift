@@ -1,33 +1,45 @@
 import UIKit
 
-var myTodoList = ["Wake up", "Go to gym", "Buy Bread", "Breakfast"]
+// Accessing and Modifying an Array
 
-print(myTodoList)
+/**
+ You access and modify an array through its methods and properties, or by using subscript syntax.
 
-print(myTodoList[0])
+ */
+
+/* To find out the number of items in an array, check its read-only count property:
+*/
+
+// Example
+var shoppingList = ["Shirt", "Pant", "Book"]
+var dummyList =  [Int] ()
+print("Shopping list contains \(shoppingList.count) items.")
+
+/*
+ Use the Boolean isEmpty property as a shortcut for checking whether the count property is equal to 0:
+*/
+if !shoppingList.isEmpty {
+    print("Your Cart \(shoppingList) items.")
+}else{
+    print("Your cart is Empty")
+}
+/*
+ You can add a new item to the end of an array by calling the array’s append(_:) method:
+ */
+
+shoppingList.append("Alan Walker Hoodie")
+print(shoppingList)
+
+/*
+ Alternatively, append an array of one or more compatible items with the addition assignment operator (+=):
+ */
+shoppingList += ["BTS sweater"]
+shoppingList += ["iPhone X"]
+
+print(shoppingList)
+
+/*
+ Retrieve a value from the array by using subscript syntax, passing the index of the value you want to retrieve within square brackets immediately after the name of the array:
+ */
 
 
-// Creating Empty Array
-
-var someItem = [Int]()
-
-print("someInts is of type [Int] with \(someItem) items.")
-
-
-//Creating an Array with a Default values
-var threeDoubles = Array(repeating: 2.5, count: 2)
-print(threeDoubles)
-
-var anotherThreeDouble = Array(repeating: 1.5, count: 2)
-
-var fourDobule = threeDoubles + anotherThreeDouble
-
-print(fourDobule)
-
-// Creating an Array with an Array Literal
-var shoppingList: [String] = ["Eggs", "wheat"]
-print(shoppingList[0])
-
-// Shorthand Example
-var addToCart = ["Egg", "Milk"]
-print(addToCart)
